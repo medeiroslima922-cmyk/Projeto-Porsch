@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: #0000;
+    background: #418352;
+    font-size: 16px;
+}
+header{
+     position: fixed;
+     left: 50%;
+     transform: translate(80%);
+     display: grid;
+     grid-template-columns: 1fr 600px:auto;
+
+
+    }
+img {
+    width: 500px;
+    height: auto;
+}
