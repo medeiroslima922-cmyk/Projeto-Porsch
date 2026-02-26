@@ -5,19 +5,35 @@
 }
 body{
    background-color: #0000;
-    background: #418352;
+    background: #c1c9c3;
     font-size: 16px;
 }
 header{
      position: fixed;
+     width: 50vw;
      left: 50%;
-     transform: translate(80%);
+     transform: translatex(80%);
      display: grid;
-     grid-template-columns: 1fr 600px:auto;
+     align-items: center;
+     grid-template-columns: 1fr 600px auto;
+     gap: 50px;
+     z-index: 2;
 
 
     }
-img {
-    width: 500px;
-    height: auto;
-}
+     & img {
+      width: 400px;
+    }
+   
+      & nav {
+     & ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+     section{
+    background-image: radial-gradient(#000, #fff);
+    height: 100vh;
+    position: relative;
+
+  }
