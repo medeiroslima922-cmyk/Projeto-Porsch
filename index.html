@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>JC PORSCH</title>
-</head>
+</head><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <body>
     <header>
-        <img src="./img/logo.png" alt="Logo JC PORSCH" class="logo">
-        <nav>
+        <img src="./img/Porsche-Logo.png" alt="Logo JC PORSCH" 
+        class="brand">
+       
+        </div>
+        <nav> 
             <ul>
                 <li>Home</li>  
                 <li>Carros</li>
@@ -17,23 +20,26 @@
             </ul>
         </nav>
     </header>
-
-    <section>
-        <div class="list"></div>
+    
+    
+     <section>
+        <h1>Bem-vindo à JC PORSCH</h1>
+        <p>A melhor concessionária de carros esportivos do Brasil!</p>
+        <div class="list">
             <div class="item">
                <div class="car-img">
                     <img src="./img/ChatGPT Image 3 de mar. de 2026, 00_00_54.png" alt="Carro Esportivo">
-              
+                </div>
+                
 
     </section>
      <div class="car-info">
                     <h2>Porsche Cayenne Electric</h2>
                     <p>O carro esportivo mais rápido do mercado, com design inovador e tecnologia de ponta.</p>
                 </div>
-    
-    <section>
-        <h1>Bem-vindo à JC PORSCH</h1>
-        <p>A melhor concessionária de carros esportivos do Brasil!</p>
+             <div>
+       </div>
+    </section>
 
          <div class="arrows">
                 <button class="prev">Anterior</button>
@@ -48,5 +54,16 @@
                 
             </ul>
         </div>
-</body>
+    </section>
 </html>
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 100) {
+        header.classList.add("rolando");
+    } else {
+        header.classList.remove("rolando");
+    }
+});
+</script>
