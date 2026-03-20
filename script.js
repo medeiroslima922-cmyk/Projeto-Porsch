@@ -23,3 +23,29 @@ dots.forEach((dot, index) => {
         showSlide(current);
     });
 });
+// Espera o HTML carregar antes de executar o JavaScript
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Pega o botão pelo ID definido no HTML
+  const botao = document.getElementById('fale-comigo');
+
+  // Adiciona um evento de clique no botão
+  botao.addEventListener('click', function(e) {
+
+    // Impede o comportamento padrão do <a> (recarregar a página)
+    e.preventDefault();
+
+    // Número do WhatsApp (com código do Brasil + DDD)
+    const numero = '5585992806240';
+
+    // Mensagem que vai aparecer já preenchida
+    const mensagem = 'Olá, vim pelo site JC Porsche!';
+
+    // Cria a URL do WhatsApp com a mensagem codificada
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    // Abre o WhatsApp em uma nova aba
+    window.open(url, '_blank');
+  });
+
+});

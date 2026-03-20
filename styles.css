@@ -222,3 +222,8 @@ input {
   background: white;
   transform: scale(1.2);
 }
+a{
+   /* Estilo geral dos links do menu */
+    color: #161515;   
+    text-decoration: none;
+}
