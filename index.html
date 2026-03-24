@@ -13,7 +13,7 @@
        
         <nav> 
             <ul>
-                <li>Modelos</li>  
+                <li><a href="#interiores-section">Interiores</a></li>
                 <li>Carros</li>
                 <li><a href="#" id="fale-comigo">Fale Conosco</a></li>   
             </ul>
@@ -59,10 +59,29 @@
              <div>
        </div>
     </section>
+   <!-- Menu dropdown em Interiores -->
+<div id="interiores-dropdown" style="display: none;">
+    <ul class="dropdown-menu">
+        <li onclick="showInterior('taycan')">Taycan Interior</li>
+        <li onclick="showInterior('911')">911 Interior</li>
+        <li onclick="showInterior('cayenne')">Cayenne Interior</li>
+    </ul>
+</div>
 
-        <div class="indicadors">
-          </ul></div>
-    </section>
+<!-- Imagens específicas (escondidas inicialmente) -->
+<div id="taycan-images" class="images-container" style="display: none;">
+    <img src="./img/Taycan.interno.jpg" alt="Taycan">
+    <button onclick="closeImages()">Fechar</button>
+</div>
+<div id="911-images" class="images-container" style="display: none;">
+    <img src="./img/Interno911.avif" alt="911">
+    <button onclick="closeImages()">Fechar</button>
+</div>
+<div id="cayenne-images" class="images-container" style="display: none;">
+    <img src="./img/Taycan.interno2.webp" alt="Cayenne">
+    <button onclick="closeImages()">Fechar</button>
+</div>
+
     <script src="script.js" defer></script>
 </body>
 </html>

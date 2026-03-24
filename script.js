@@ -49,3 +49,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+// Botao para as imagens internas do carros//
+function showInterior(modelo) {
+    document.getElementById('interiores-dropdown').style.display = 'none';
+    document.getElementById(modelo + '-images').style.display = 'block';
+}
+
+function closeImages() {
+    document.querySelectorAll('.images-container').forEach(el => el.style.display = 'none');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const linkInteriores = document.querySelector('a[href="#interiores-section"]');
+    linkInteriores?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdown = document.getElementById('interiores-dropdown');
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+    });
+});
+
+

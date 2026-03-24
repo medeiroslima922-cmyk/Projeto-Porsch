@@ -227,3 +227,44 @@ a{
     color: #161515;   
     text-decoration: none;
 }
+.dropdown-menu {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #eee;
+}
+
+.images-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.images-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.images-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
