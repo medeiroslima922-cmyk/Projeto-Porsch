@@ -49,19 +49,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-function mostrarInternos() {
-  const section = document.getElementById("internos");
-  const galeria = document.getElementById("galeria-interna");
-
-  // mostra a seção
-  section.style.display = "block";
-
-  // adiciona as imagens internas
-  galeria.innerHTML = `
-    <h3>Taycan.jpg</h3>
-    <img src="./img/taycan.interno.jpg" width="300">
-    <img src="./img/taycan-interior2.jpg" width="300">
-
-    <h3>911</h3>
-    <img src="./img/911-interior1.jpg" width="300">
-    <img src="./img/911-interior2.jpg" width="300">
