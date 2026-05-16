@@ -9,7 +9,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0d0d0d; /* Fundo mais escuro, padrão premium */
+    background-color: #0d0d0d;
+    /* Fundo mais escuro, padrão premium */
     color: #f2f2f2;
     font-size: 16px;
     overflow-x: hidden;
@@ -27,7 +28,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(10, 10, 10, 0.85); /* Vidro/Transparente escuro */
+    background: rgba(10, 10, 10, 0.85);
+    /* Vidro/Transparente escuro */
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: 0.3s ease;
@@ -53,7 +55,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #d11212; /* Vermelho Porsche */
+    color: #d11212;
+    /* Vermelho Porsche */
 }
 
 /* =========================================
@@ -75,8 +78,10 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz o vídeo cobrir toda a área */
-    object-position: center 70%; /* Ajuste o ângulo focado mais pro meio/baixo do carro */
+    object-fit: cover;
+    /* Faz o vídeo cobrir toda a área */
+    object-position: center 70%;
+    /* Ajuste o ângulo focado mais pro meio/baixo do carro */
     z-index: -2;
 }
 
@@ -86,7 +91,7 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(13,13,13,0.9) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(13, 13, 13, 0.9) 100%);
     z-index: -1;
 }
 
@@ -95,7 +100,8 @@ header nav ul li a:hover {
     max-width: 800px;
     padding: 0 20px;
     z-index: 1;
-    margin-top: 100px; /* Desce um pouco o texto */
+    margin-top: 100px;
+    /* Desce um pouco o texto */
 }
 
 .hero-content h2 {
@@ -104,20 +110,21 @@ header nav ul li a:hover {
     letter-spacing: 5px;
     margin-bottom: 10px;
     color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     font-weight: 400;
     color: #cccccc;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* =========================================
    SEÇÃO MODELOS (EXTERIORES)
 ========================================= */
-.modelos-section, .interiores-section {
+.modelos-section,
+.interiores-section {
     padding: 100px 5%;
     text-align: center;
     background-color: #0d0d0d;
@@ -137,7 +144,7 @@ header nav ul li a:hover {
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #d11212;
+    background-color: #9a00e7;
     margin: 15px auto 0;
 }
 
@@ -153,13 +160,13 @@ header nav ul li a:hover {
     background: #1a1a1a;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .modelo-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(209, 18, 18, 0.2);
+    box-shadow: 0 15px 40px rgba(144, 40, 255, 0.2);
 }
 
 .modelo-card .img-wrapper {
@@ -172,12 +179,14 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Mantém o carro centralizado no recorte */
+    object-position: center;
+    /* Mantém o carro centralizado no recorte */
     transition: transform 0.5s ease;
 }
 
 .modelo-card:hover img {
-    transform: scale(1.08); /* Zoom suave no hover */
+    transform: scale(1.08);
+    /* Zoom suave no hover */
 }
 
 .modelo-card h3 {
@@ -191,7 +200,8 @@ header nav ul li a:hover {
    SEÇÃO INTERIORES
 ========================================= */
 .interiores-section {
-    background-color: #121212; /* Fundo um tom levemente diferente para contraste */
+    background-color: #121212;
+    /* Fundo um tom levemente diferente para contraste */
 }
 
 .interiores-grid {
@@ -208,21 +218,24 @@ header nav ul li a:hover {
     overflow: hidden;
     height: 350px;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 .interior-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 60%; /* Foca melhor no painel/volante */
+    object-position: center 60%;
+    /* Foca melhor no painel/volante */
     transition: transform 0.6s ease;
-    filter: brightness(0.7); /* Deixa um pouco escuro por padrão */
+    filter: brightness(0.7);
+    /* Deixa um pouco escuro por padrão */
 }
 
 .interior-card:hover img {
     transform: scale(1.1);
-    filter: brightness(1); /* Clareia ao passar o mouse */
+    filter: brightness(1);
+    /* Clareia ao passar o mouse */
 }
 
 .interior-info {
@@ -231,7 +244,7 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     padding: 30px 20px 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     text-align: left;
 }
 
@@ -270,8 +283,10 @@ header nav ul li a:hover {
         font-size: 1rem;
     }
 
-    .modelos-grid, .interiores-grid {
-        grid-template-columns: 1fr; /* Coluna única no mobile */
+    .modelos-grid,
+    .interiores-grid {
+        grid-template-columns: 1fr;
+        /* Coluna única no mobile */
         gap: 30px;
     }
 
@@ -291,16 +306,19 @@ header nav ul li a:hover {
 
 /* O fundo escuro do modal */
 .modal {
-    display: none; /* Oculto por padrão */
+    display: none;
+    /* Oculto por padrão */
     position: fixed;
-    z-index: 2000; /* Fica acima do header */
+    z-index: 2000;
+    /* Fica acima do header */
     padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo bem escuro */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fundo bem escuro */
 }
 
 /* A imagem ampliada no centro */
@@ -310,8 +328,9 @@ header nav ul li a:hover {
     max-width: 90%;
     max-height: 80vh;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    animation: zoomIn 0.3s ease; /* Animação suave ao abrir */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    animation: zoomIn 0.3s ease;
+    /* Animação suave ao abrir */
 }
 
 /* Botão de fechar (o X) */
@@ -328,13 +347,20 @@ header nav ul li a:hover {
 
 .close-modal:hover,
 .close-modal:focus {
-    color: #d11212;
+    color: #8911da;
     text-decoration: none;
     cursor: pointer;
 }
 
 /* Keyframe para animação da imagem abrindo */
 @keyframes zoomIn {
-    from {transform: scale(0.8); opacity: 0;}
-    to {transform: scale(1); opacity: 1;}
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
