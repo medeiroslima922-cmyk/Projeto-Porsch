@@ -1,322 +1,340 @@
-*{
+/* RESET BÁSICO */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #bdb2b2;
-    color: #e6dcdc;
+    background-color: #0d0d0d; /* Fundo mais escuro, padrão premium */
+    color: #f2f2f2;
     font-size: 16px;
+    overflow-x: hidden;
 }
+
+/* =========================================
+   HEADER
+========================================= */
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* agora ocupa tudo */
-    padding: 20px 60px;
-
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background-color: #0a0a0a; /* preto total */
-    z-index: 999;
+    padding: 20px 60px;
+    background: rgba(10, 10, 10, 0.85); /* Vidro/Transparente escuro */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-header img {
-    width: 250px;
+
+.brand {
+    width: 200px;
 }
 
 header nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
+    display: flex;
+    gap: 40px;
 }
 
-        
-    section {
-      background-image: radial-gradient(#00000000, #807a7a);
-      height: 100vh;
-      position: relative;
-      padding-top: 200px; /* espaço para o header fixo */
+header nav ul li a {
+    color: #f2f2f2;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #d11212; /* Vermelho Porsche */
+}
+
+/* =========================================
+   HERO SECTION (VÍDEO)
+========================================= */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir toda a área */
+    object-position: center 70%; /* Ajuste o ângulo focado mais pro meio/baixo do carro */
+    z-index: -2;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(13,13,13,0.9) 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 1;
+    margin-top: 100px; /* Desce um pouco o texto */
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #cccccc;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* =========================================
+   SEÇÃO MODELOS (EXTERIORES)
+========================================= */
+.modelos-section, .interiores-section {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: #0d0d0d;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #d11212;
+    margin: 15px auto 0;
+}
+
+.modelos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.modelo-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modelo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(209, 18, 18, 0.2);
+}
+
+.modelo-card .img-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.modelo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Mantém o carro centralizado no recorte */
+    transition: transform 0.5s ease;
+}
+
+.modelo-card:hover img {
+    transform: scale(1.08); /* Zoom suave no hover */
+}
+
+.modelo-card h3 {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* =========================================
+   SEÇÃO INTERIORES
+========================================= */
+.interiores-section {
+    background-color: #121212; /* Fundo um tom levemente diferente para contraste */
+}
+
+.interiores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.interior-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+.interior-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%; /* Foca melhor no painel/volante */
+    transition: transform 0.6s ease;
+    filter: brightness(0.7); /* Deixa um pouco escuro por padrão */
+}
+
+.interior-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1); /* Clareia ao passar o mouse */
+}
+
+.interior-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    text-align: left;
+}
+
+.interior-info h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
     }
 
-    section .list {
-    width: 70vw;
-    height: 100%;
-    position: relative;
+    .brand {
+        width: 150px;
+    }
+
+    header nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .modelos-grid, .interiores-grid {
+        grid-template-columns: 1fr; /* Coluna única no mobile */
+        gap: 30px;
+    }
+
+    .interior-card {
+        height: 250px;
+    }
 }
 
-section .item {
-    position: absolute;
-    inset: 0;
+/* =========================================
+   MODAL / LIGHTBOX (AMPLIAR IMAGEM)
+========================================= */
+/* Cursor pointer para indicar que as imagens são clicáveis */
+.modelo-card img,
+.interior-card img {
+    cursor: pointer;
 }
 
-section .car-img {
-    position: absolute;
-    top: 30%;
-    transform: translateY(-49%);
-    
-}
-
-section .car-img img {
-    width: 100%;
-    transform: rotate(-20deg); /* era -30% errado */
-}
-
-.arrows button img {
-    width: -100%auto;
-}
-/* ===== ESTILO DO TEXTO DO CARRO ===== */
-
-.car-info h2 {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 43px;
-    font-weight: 750;
-    color: #1b1a1a;
-    margin-bottom: px;
-}
-
-.car-info p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: 400;
-    color: #292525;
-    max-width: 500px;
-}
-header {
-    background: linear-gradient(to bottom, rgba(124, 21, 21, 0.7), transparent);
-}
-
-header nav ul li {
-    color: #161414;
-    font-weight: 660;
-    font-size: 18px;
-}
-header img {
-    filter: brightness(-250%) invert(-120%);
-}
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo {
-    width: 100px;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.brand-name {
-    font-size: 40px;
-    font-weight: 800;
-    margin: 2%;
-}
-.logo {
-    width: 100px; /* ajuste se quiser maior */
-}
-header {
+/* O fundo escuro do modal */
+.modal {
+    display: none; /* Oculto por padrão */
     position: fixed;
-    top: 0;
+    z-index: 2000; /* Fica acima do header */
+    padding-top: 60px;
     left: 0;
+    top: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-
-    background: transparent;
-    transition: 0.3s ease;
-    z-index: 1000;
-}
-header.rolando {
-    background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-/* ===== CARROSSEL ===== */
-
-.hero {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo bem escuro */
 }
 
-.slider {
-  width: 100%;
-  flex-shrink: 0;
-  
-}
-
-.slides {
-  display: flex;
-  width: 100%;
-  height: 150%;
-  transition: 0.3s ease;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  width: 100%;
-  flex-shrink: 0;
-  text-align: center;
-}
-
-.slide img {
-  width: 1860px;
-  margin-top: -260px;
-}
-
-input {
-  display: none;
-}
-
-/* Bolinhas de navegação */
-
-.navigation {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 15px;
-}
-
-.navigation .dot {
-  width: 15px;
-  height: 15px;
-  background: rgb(247, 243, 243);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.dot.active {
-  background: white;
-  transform: scale(1.2);
-}
-a{
-   /* Estilo geral dos links do menu */
-    color: #161515;   
-    text-decoration: none;
-}
-.dropdown-menu {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-}
-
-.dropdown-menu li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-    background: #eee;
-}
-
-.images-container {
-    text-align: center;
-    padding: 20px;
-    max-width: 1500px;
-    margin: 20px auto;
-}
-
-.images-container img {
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.images-container button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-/* VÍDEO NO CARROSSEL - ADICIONE NO FINAL */
-.slide video {
-    width: 1000px;  /* MESMA largura das suas imagens */
-    margin-top: -200px;  /* MESMO posicionamento */
+/* A imagem ampliada no centro */
+.modal-content {
+    margin: auto;
     display: block;
-}
-.slide video {
-    width: 100%;           /* ← 100% da tela (NÃO 1860px) */
-    height: 900px;          /* ← Preenche altura */
-    object-fit: cover;     /* ← Cobre toda área sem distorcer */
-    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    animation: zoomIn 0.3s ease; /* Animação suave ao abrir */
 }
 
-.video-title {
+/* Botão de fechar (o X) */
+.close-modal {
     position: absolute;
-    bottom: 60%;
-    left: 70%;
-    transform: translateX(-80%, -80%);
-    color: white !important;
-    font-size: 3%;
-    text-shadow: 2px 2px 8px #000;
-    background: rgba(0,0,0,0.7);
-    padding: 10px 20px;
-    border-radius: 11px;
-    z-index: 10;
+    top: 30px;
+    right: 50px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Ajuste pro header não cobrir título */
-.slide {
-    position: relative;
-}
-.images-container {
-    width: 100vw;        /* ← LARGURA TELA TODA */
-    height: 100vh;       /* ← ALTURA TELA TODA */
-    position: fixed;     /* ← SOBRE TUDO */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0,0,0,0.9);  /* ← FUNDO ESCURO */
+.close-modal:hover,
+.close-modal:focus {
+    color: #d11212;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.images-container img {
-    width: 90vw;         /* ← 90% da tela */
-    height: 70vh;        /* ← 70% da tela */
-    object-fit: cover;
-    border-radius: 0;    /* ← Sem borda pra tela cheia */
-    max-width: none;
+/* Keyframe para animação da imagem abrindo */
+@keyframes zoomIn {
+    from {transform: scale(0.8); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
 }

@@ -7,87 +7,89 @@
     <title>JC PORSCH</title>
 </head><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <body>
-    <header>
-        <img src="./img/Porsche-Logo.png" alt="Logo JC PORSCH" 
-        class="brand">
-       
+    <!-- HEADER -->
+    <header id="header">
+        <img src="./img/Porsche-Logo.png" alt="Logo JC PORSCH" class="brand">
         <nav> 
             <ul>
                 <li><a href="#interiores-section">Interiores</a></li>
-                <li>Carros</li>
+                <li><a href="#modelos">Carros</a></li>
                 <li><a href="#" id="fale-comigo">Fale Conosco</a></li>   
             </ul>
         </nav>
     </header>
     
-    
-  <section class="hero">
-
-   <div class="slider"> 
-
-     <div class="slides">
-        <!-- SLIDE 1: VIDEO (PRIMEIRO - SUBSTITUA AQUI) -->
-        <div class="slide active">
-            <video autoplay muted loop playsinline>
-                <source src="./img/porsche.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-         </div>
-      <div class="slide">
-        <img src="./img/Taycan.jpg" alt="Porsche Taycan">
-        <h1>Porsche Taycan</h1>
-       </div>
-
-       <div class="slide">
-        <img src="./img/911.jpg" alt="Porsche 911">
-        <h1>Porsche 911</h1>
-       </div>
-
-       <div class="slide">
-        <img src="./img/911.por.png.jpeg" alt="Porsche 911">
-        <h1>Porsche Cayenne</h1>
-       </div>
-
-    </div>
-
-    <!--bolinhas-->
-   <div class="navigation">
-     <span class="dot active"></span>
-     <span class="dot"></span>
-     <span class="dot"></span>
-     <span class="dot"></span>
-   </div>
-
-  </section>
-     <div class="car-info">
-                    <h2>PORSCHE</h2>
-                    <p>O carro esportivo mais rápido do mercado, com design inovador e tecnologia de ponta.</p>
-                </div>
-             <div>
-       </div>
+    <!-- HERO SECTION (VÍDEO) -->
+    <section class="hero" id="hero">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./img/porsche.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+        <div class="hero-content">
+            <h2>PORSCHE</h2>
+            <p>O carro esportivo mais rápido do mercado, com design inovador e tecnologia de ponta.</p>
+        </div>
     </section>
-   <!-- Menu dropdown em Interiores -->
-<div id="interiores-dropdown" style="display: none;">
-    <ul class="dropdown-menu">
-        <li onclick="showInterior('taycan')">Taycan Interior</li>
-        <li onclick="showInterior('911')">911 Interior</li>
-        <li onclick="showInterior('cayenne')">Cayenne Interior</li>
-    </ul>
-</div>
 
-<!-- Imagens específicas (escondidas inicialmente) -->
-<div id="taycan-images" class="images-container" style="display: none;">
-    <img src="./img/Taycan.interno.jpg" alt="Taycan">
-    <button onclick="closeImages()">Fechar</button>
-</div>
-<div id="911-images" class="images-container" style="display: none;">
-    <img src="./img/Interno911.avif" alt="911">
-    <button onclick="closeImages()">Fechar</button>
-</div>
-<div id="cayenne-images" class="images-container" style="display: none;">
-    <img src="./img/Taycan.interno2.webp" alt="Cayenne">
-    <button onclick="closeImages()">Fechar</button>
-</div>
+    <!-- MODELOS SECTION (EXTERIORES) -->
+    <section id="modelos" class="modelos-section">
+        <h2 class="section-title">Nossos Modelos</h2>
+        <div class="modelos-grid">
+            <div class="modelo-card">
+                <div class="img-wrapper">
+                    <img src="./img/Taycan.jpg" alt="Porsche Taycan exterior">
+                </div>
+                <h3>Porsche Taycan</h3>
+            </div>
+            <div class="modelo-card">
+                <div class="img-wrapper">
+                    <img src="./img/911.jpg" alt="Porsche 911 exterior">
+                </div>
+                <h3>Porsche 911</h3>
+            </div>
+            <div class="modelo-card">
+                <div class="img-wrapper">
+                    <img src="./img/911.por.png.jpeg" alt="Porsche Cayenne exterior">
+                </div>
+                <h3>Porsche Cayenne</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERIORES SECTION -->
+    <section id="interiores-section" class="interiores-section">
+        <h2 class="section-title">Sofisticação Interior</h2>
+        <div class="interiores-grid">
+            <!-- Card Taycan -->
+            <div class="interior-card">
+                <img src="./img/Taycan.interno.jpg" alt="Interior Taycan detalhe">
+                <div class="interior-info">
+                    <h3>Interior Taycan</h3>
+                </div>
+            </div>
+            <!-- Card 911 -->
+            <div class="interior-card">
+                <img src="./img/Interno911.avif" alt="Interior 911 detalhe">
+                <div class="interior-info">
+                    <h3>Interior 911</h3>
+                </div>
+            </div>
+            <!-- Card Cayenne -->
+            <div class="interior-card">
+                <img src="./img/Taycan.interno2.webp" alt="Interior Cayenne detalhe">
+                <div class="interior-info">
+                    <h3>Interior Cayenne</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL / LIGHTBOX PARA AMPLIAR IMAGEM -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-ampliada">
+    </div>
 
     <script src="script.js" defer></script>
 </body>
